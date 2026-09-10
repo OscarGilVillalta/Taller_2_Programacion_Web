@@ -1,0 +1,24 @@
+{
+  "name": "taller_2_programacion_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarGilVillalta/Taller_2_Programacion_Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OscarGilVillalta/Taller_2_Programacion_Web/issues"
+  },
+  "homepage": "https://github.com/OscarGilVillalta/Taller_2_Programacion_Web#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
