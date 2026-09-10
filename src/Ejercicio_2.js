@@ -16,8 +16,7 @@ const tarifas = {
     panama: 3.50
 };
 
-function calcularEnvio(pais, peso)
-{
+function calcularEnvio(pais, peso) {
     const tarifa = tarifas[pais];
 
     let subtotal = tarifa * peso;
@@ -25,19 +24,17 @@ function calcularEnvio(pais, peso)
     let recargo = 0;
 
     // Validaciones
-    if(peso > 20)
-        {
-            descuento = subtotal * 0.10;
-        }
-    
-    if(peso < 1)
-        {
-            recargo = 5;
-        }
+    if (peso > 20) {
+        descuento = subtotal * 0.10;
+    }
+
+    if (peso < 1) {
+        recargo = 5;
+    }
 
     const total = subtotal - descuento + recargo;
 
-     return {
+    return {
         pais: pais,
         peso: peso,
         tarifa: tarifa,
@@ -58,7 +55,7 @@ app.get("/api/envio/:pais/:peso", (req, res) => {
         // Validar el pais
         if (!tarifas[pais]) {
             return res.status(404).json({
-                error: "El país ingresado no está permitido."
+                error: "El país ingresado no está permitido o no existe."
             });
         }
 
